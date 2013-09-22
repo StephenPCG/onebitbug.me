@@ -65,3 +65,6 @@ STATIC_PATHS = ['images']
 
 # don't display categories on nav menu
 DISPLAY_CATEGORIES_ON_MENU = False
+
+PLUGIN_PATH = "plugins"
+PLUGINS = ['neighbors']
