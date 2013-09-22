@@ -30,8 +30,8 @@ TRANSLATION_FEED_ATOM = None
 # Social widget
 SOCIAL = (('https://github.com/StephenPCG/', 'Github'),)
 MENUITEMS = (('Archives', '/archives.html'),
-             ('Biography', '/biography/'),
-             ('GuestBook', '/guest/'),
+             ('Biography', '/pages/biography/'),
+             ('GuestBook', '/pages/guest/'),
              )
 
 DEFAULT_PAGINATION = 5
@@ -46,6 +46,9 @@ CATEGORY_SAVE_AS = 'categories/{slug}/index.html'
 TAG_URL = 'tags/{slug}/'
 TAG_SAVE_AS = 'tags/{slug}/index.html'
 
+PAGE_URL = 'pages/{slug}/'
+PAGE_SAVE_AS = 'pages/{slug}/index.html'
+
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 
 FEED_DOMAIN = SITEURL
@@ -59,3 +62,6 @@ USE_FOLDER_AS_CATEGORY = False
 DISPLAY_PAGES_ON_MENU = False
 
 STATIC_PATHS = ['images']
+
+# don't display categories on nav menu
+DISPLAY_CATEGORIES_ON_MENU = False
