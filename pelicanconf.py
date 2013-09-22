@@ -36,17 +36,18 @@ MENUITEMS = (('Archives', '/archives.html'),
 
 DEFAULT_PAGINATION = 5
 
-ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}/{slug}/'
-ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
-YEAR_ARCHIVE_SAVE_AS = '{date:%Y}/index.html'
-MONTH_ARCHIVE_SAVE_AS = '{date:%Y}/{date:%m}/index.html'
-DAY_ARCHIVE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/index.html'
-CATEGORY_URL = 'categories/{slug}.html'
-CATEGORY_SAVE_AS = 'categories/{slug}.html'
-TAG_URL = 'tags/{slug}.html'
-TAG_SAVE_AS = 'tags/{slug}.html'
+ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
+ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+YEAR_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/index.html'
+MONTH_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/index.html'
+DAY_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/{date:%d}/index.html'
+CATEGORY_URL = 'categories/{slug}/'
+CATEGORY_SAVE_AS = 'categories/{slug}/index.html'
+TAG_URL = 'tags/{slug}/'
+TAG_SAVE_AS = 'tags/{slug}/index.html'
 
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 
 FEED_DOMAIN = SITEURL
 
+THEME = 'themes/gum'
