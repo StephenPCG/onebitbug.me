@@ -51,3 +51,11 @@ DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 FEED_DOMAIN = SITEURL
 
 THEME = 'themes/gum'
+
+# don't guess category from folder name
+USE_FOLDER_AS_CATEGORY = False
+
+# don't display all pages on nav menu
+DISPLAY_PAGES_ON_MENU = False
+
+STATIC_PATHS = ['images']

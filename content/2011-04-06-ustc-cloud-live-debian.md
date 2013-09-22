@@ -11,11 +11,11 @@ Leverage USTC PXE Service, we are developing a Customized Cloud Live System for 
 
 After the system boot up, you will be asked to enter your membership, username and password (the same with email.ustc.edu.cn account):
 
-{% img /images/posts/2011-04-06/setup.png %}
+<img src="/static/images/posts/2011-04-06/setup.png" />
 
 After you entered the correct username/password, the system is ready for login. You can login with the same username as email account, without password. You will have sudo privilege.
 
-{% img /images/posts/2011-04-06/mount.png %}
+<img src="/static/images/posts/2011-04-06/mount.png" />
 
 Currently, it’s just a debian basic system, without any desktop environment installed. We will further customized it for USTC environment. E.g. setting up thunderbird to use email.ustc.edu.cn by default, install software popular among USTCers. 
 

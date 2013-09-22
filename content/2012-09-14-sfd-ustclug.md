@@ -6,7 +6,7 @@ Slug: sfd-ustclug
 
 本文转自 [中国科学技术大学Linux用户协会][4] 活动通知。
 
-{% img /images/posts/2012-09-14/12SFD-03_thumb.jpg 800 600 '活动海报' %}
+<img src="/static/images/posts/2012-09-14/12SFD-03_thumb.jpg" style="max-width: 80%"/>
 
 SFD 就是传说中的[软件自由日（Software Freedom Day）][1]，
 今年的[合肥站庆祝活动][2]将在本周六（9月15日）于[中国科学技术大学][3]举办。
@@ -43,7 +43,7 @@ Linux 上有什么好玩的小游戏？<br />
 * 地点：    [中国科学技术大学西区学生活动中心三楼多功能厅][5] （31.839339,117.253636）
 * 网上直播地址：<http://www.fengyunzhibo.com/tv/22107_1347540720168.htm>
 
-{% img /images/posts/2012-09-14/12SFD-01_thumb.jpg 800 500 '活动海报：minecraft建立的SFD造型建筑' %}
+<img src="/static/images/posts/2012-09-14/12SFD-01_thumb.jpg" style="max-width: 80%"/>
 
 [1]: http://softwarefreedomday.org/
 [2]: http://wiki.softwarefreedomday.org/2012/China/Hefei
