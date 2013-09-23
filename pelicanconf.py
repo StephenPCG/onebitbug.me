@@ -57,13 +57,31 @@ USE_FOLDER_AS_CATEGORY = False
 # don't display all pages on nav menu
 DISPLAY_PAGES_ON_MENU = False
 
-STATIC_PATHS = ['images']
+STATIC_PATHS = [ 'images' ]
+FILES_TO_COPY = (
+        ('extra/robots.txt', 'robots.txt'),
+        )
 
 # don't display categories on nav menu
 DISPLAY_CATEGORIES_ON_MENU = False
 
 PLUGIN_PATH = "plugins"
-PLUGINS = ['neighbors']
+PLUGINS = ['neighbors', 'sitemap', 'gravatar']
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.5,
+        'indexes': 0.5,
+        'pages': 0.5
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'indexes': 'daily',
+        'pages': 'monthly'
+    }
+}
 
 # python-markdown extensions, see: http://pythonhosted.org/Markdown/extensions/index.html
 MD_EXTENSIONS = ['codehilite','extra']
+
+DELETE_OUTPUT_DIRECTORY = True

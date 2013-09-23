@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Sitemap: http://onebitbug.me/sitemap.xml
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: baiduspider
+Disallow: /
