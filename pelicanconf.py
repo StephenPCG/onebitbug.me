@@ -48,8 +48,9 @@ DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 FEED_DOMAIN = SITEURL
 
 THEME = 'themes/svbhack'
-USER_LOGO_URL = SITEURL = '/static/images/pages/snsface.png'
+USER_LOGO_URL = SITEURL + '/static/images/pages/snsface.png'
 TAGLINE = 'SA & OpsDev. <br />Proudly working @Cloudacc Inc.'
+FAVICON_URL = '/static/images/blog/favicon.ico'
 
 # don't guess category from folder name
 USE_FOLDER_AS_CATEGORY = False

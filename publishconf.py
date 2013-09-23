@@ -13,6 +13,8 @@ from pelicanconf import *
 SITEURL = 'http://onebitbug.me'
 RELATIVE_URLS = False
 
+USER_LOGO_URL = SITEURL + '/static/images/pages/snsface.png'
+
 FEED_ATOM = 'feeds/atom.xml'
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
