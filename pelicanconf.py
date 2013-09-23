@@ -23,7 +23,8 @@ RELATIVE_URLS = True
 
 # Social widget
 SOCIAL = (('https://github.com/StephenPCG/', 'Github'),)
-MENUITEMS = (('Archives', '/archives.html'),
+MENUITEMS = (('Home', '/'),
+             ('Archives', '/archives.html'),
              ('Biography', '/pages/biography/'),
              ('GuestBook', '/pages/guest/'),
              )
