@@ -46,6 +46,8 @@ pushd $__script_dir/.. >> $logfile
 
 log_echo "invoking: git pull"
 git pull |& tee -a $logfile
+log_echo "invoking: git submodule update"
+git submodule update |& tee -a $logfile
 
 # `make html` will first cleanup output/, if the web root directly point here,
 # it will cause a short period of 404, and if make failed, things goes worse.
