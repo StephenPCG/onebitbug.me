@@ -8,6 +8,7 @@ SITEURL = ''
 SITENAME = u'May the #! be with you'
 DISQUS_SITENAME = 'onebitbug'
 GITHUB_URL = 'https://github.com/StephenPCG/'
+GITHUB_USER = 'StephenPCG'
 
 TIMEZONE = 'Asia/Shanghai'
 DEFAULT_LANG = u'zh'
@@ -22,36 +23,41 @@ RELATIVE_URLS = True
 #          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('https://github.com/StephenPCG/', 'Github'),)
+SOCIAL = ( ('Computing Life', 'http://grapeot.me/'),
+           ('Code is Might', 'http://www.codeismight.com/'),
+           ('Sigma', 'http://www.sigma.me/'),
+           ('USTC LUG', 'http://lug.ustc.edu.cn/'),
+         )
 MENUITEMS = (('Home', '/'),
              ('Archives', '/archives.html'),
-             ('Biography', '/pages/biography/'),
-             ('GuestBook', '/pages/guest/'),
+             ('Biography', '/biography/'),
+             ('GuestBook', '/guest/'),
              )
 
 DEFAULT_PAGINATION = 5
 
-ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
-ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
-YEAR_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/index.html'
-MONTH_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/index.html'
-DAY_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/{date:%d}/index.html'
+ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}/{slug}/'
+ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+YEAR_ARCHIVE_SAVE_AS = '{date:%Y}/index.html'
+MONTH_ARCHIVE_SAVE_AS = '{date:%Y}/{date:%m}/index.html'
+DAY_ARCHIVE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/index.html'
 CATEGORY_URL = 'categories/{slug}/'
 CATEGORY_SAVE_AS = 'categories/{slug}/index.html'
 TAG_URL = 'tags/{slug}/'
 TAG_SAVE_AS = 'tags/{slug}/index.html'
 
-PAGE_URL = 'pages/{slug}/'
-PAGE_SAVE_AS = 'pages/{slug}/index.html'
+PAGE_URL = '{slug}/'
+PAGE_SAVE_AS = '{slug}/index.html'
 
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 
 FEED_DOMAIN = SITEURL
 
 THEME = 'themes/octopress'
-USER_LOGO_URL = SITEURL + '/static/images/pages/snsface.png'
-TAGLINE = 'SA & OpsDev. <br />Proudly working @Cloudacc Inc.'
-FAVICON_URL = '/static/images/blog/favicon.ico'
+#USER_LOGO_URL = SITEURL + '/static/images/pages/snsface.png'
+#TAGLINE = 'SA & OpsDev. <br />Proudly working @Cloudacc Inc.'
+FAVICON_URL = 'static/images/blog/favicon.ico'
+SEARCH_BOX = True
 
 # don't guess category from folder name
 USE_FOLDER_AS_CATEGORY = False
@@ -68,7 +74,7 @@ FILES_TO_COPY = (
 DISPLAY_CATEGORIES_ON_MENU = False
 
 PLUGIN_PATH = "plugins"
-PLUGINS = ['neighbors', 'sitemap', 'gravatar']
+PLUGINS = ['neighbors', 'sitemap', 'gravatar', 'liquid_tags.img']
 SITEMAP = {
     'format': 'xml',
     'priorities': {
