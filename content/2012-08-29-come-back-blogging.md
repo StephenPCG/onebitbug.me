@@ -1,4 +1,4 @@
-Title: "复活了..."
+Title: 复活了...
 Category: Life
 Author: Stephen Zhang
 Tags: blog, wordpress, jekyll, bootstrap

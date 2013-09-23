@@ -1,5 +1,5 @@
 Author: Stephen Zhang
-Title: 'Using LKM and procfs -- Part II'
+Title: Using LKM and procfs -- Part II
 Category: Linux
 Tags: LKM, proc, procfs, Linux Kernel
 guid: http://onebitbug.me/?p=17

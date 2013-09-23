@@ -1,5 +1,5 @@
 Layout: post
-Title: "软件自由日 SFD 2012 合肥站活动"
+Title: 软件自由日 SFD 2012 合肥站活动
 Category: Linux
 Tags: SFD, USTC LUG
 Slug: sfd-ustclug
