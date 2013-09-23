@@ -28,16 +28,49 @@ echo -e "Content-type: text/plain\n"
 #    args[${param[i]}]=${param[i+1]}
 #done
 
-log_echo "get update request, updating..."
+echo >> $logfile
+log "-------------------------------"
+log "REMOTE_ADDR:     $REMOTE_ADDR"
+log "REMOTE_PORT:     $REMOTE_PORT"
+log "HTTP_USER_AGENT: $HTTP_USER_AGENT"
+log "REQUEST_METHOD:  $REQUEST_METHOD"
+log "HTTP_HOST:       $HTTP_HOST"
+log "REQUEST_URI:     $REQUEST_URI"
+if [ "$REQUEST_METHOD" == "POST" ]; then
+    log "POST BODY:       \
+$(</dev/stdin)"
+fi
+
+log_echo "updating..."
 pushd $__script_dir/.. >> $logfile
+
 log_echo "invoking: git pull"
 git pull |& tee -a $logfile
+
+# `make html` will first cleanup output/, if the web root directly point here,
+# it will cause a short period of 404, and if make failed, things goes worse.
+# so point let's make this structure:
+# $code_root/
+#    |- output/
+#    |- webroot/
+#    |-   output-$(date +%s)
+#    |-   onebitbug.me --> output-%current%
+# when a new `make html` succeed, copy output/ to webroot/output-$(date +%s)
+# alter link target of onebitbug.me to output-%new%, remove output-%old%
 log_echo "invoking: make html..."
 if make html >> $logfile; then
+    new="output-$(date +%s)"
+    cp -ar output webroot/$new
+    old=$(readlink webroot/onebitbug.me 2>/dev/null)
+    ln -snf $new webroot/onebitbug.me
+    if [ -e "webroot/$old" ]; then
+        rm -rf webroot/$old
+    fi
     echo "succeed!"
 else
     echo "failed"
 fi
+
 popd >> $logfile
 
 log_echo "done!"
