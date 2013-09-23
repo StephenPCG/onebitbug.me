@@ -16,7 +16,7 @@ MacbookAir终究太小了，出差旅行不错、坐床上看电视写博客不�
 这次折腾kvm，在显卡和网络方面都有了改进，各项表现基本满意，除了不支持3D加速/Areo效果外，跟VMware差不了多少了。 本文中所提到的kvm版本为Debian 1.4.0+dfsg-1exp，内核版本为Debian 3.8.5-1~experimental.1。
 
 
-##### 优化网络
+#### 优化网络
 **关键字**：`vhost_net`
 
 根据kvm wiki[这个页面][1]，使用vhost会大大提高传输速度。 我简单做了下测试，分别用下面两种参数启动机器，再比较传输速度：
@@ -33,8 +33,8 @@ MacbookAir终究太小了，出差旅行不错、坐床上看电视写博客不�
 
 配置文件如下：
 
-_/etc/network/interfaces_
-```
+`/etc/network/interfaces`
+```bash
 iface eth0 inet manual
 
 auto vnet0
@@ -62,8 +62,8 @@ iface vnet1 inet static
     bridge_fd 0
 ```
 
-_一个ifup脚本_:
-```
+`ifup`脚本:
+```bash
 #!/bin/sh
 
 PATH=$PATH:/sbin:/usr/sbin
@@ -94,13 +94,13 @@ fi
 echo "W: $0: $br does not exist"
 ```
 
-_一个ifdown脚本(空)_：
-```
+`ifdown`脚本(空)：
+```bash
 #!/bin/sh
 :
 ```
 
-_kvm启动参数：_
+kvm启动参数：
 ```
 sudo qemu-system-x86_64 \
     -netdev tap,id=nic0,ifname=kinet1,vhost=on -device virtio-net-pci,netdev=nic0,mac=0f:ee:d0:00:10:00 \
@@ -108,7 +108,7 @@ sudo qemu-system-x86_64 \
     ${other_options}
 ```
 
-##### 显卡优化
+#### 显卡优化
 **关键字**：`qxl`、`spice` 主要参考了[这个页面][2]。
 系统使用-vga qxl，并给guest os安装spice驱动。
 具体需要的文件和使用方法，可以参考前面所给的链接，以及[spice的主页][3]。
@@ -124,7 +124,7 @@ qemu-system-x86_64 \
 
 这是最终的参数，在此之前，需要先安装guest系统，安装spice guest组件等，过程都略过，很简单。
 
-##### USB
+#### USB
 **关键字**：`ehci`
 
 主要参考[这个页面][4]。
@@ -141,7 +141,7 @@ qemu-system-x86_64 \
 
 <img style="max-width: 80%" src="/static/images/posts/2013-04-15/win7-score.png" />
 
-##### Assigning physical VGA adapters
+#### Assigning physical VGA adapters
 
 这次买机器，选择CPU时，特别关注了vt-d技术，以及kvm的支持情况。
 其实最关心的是显卡的pass through。 
