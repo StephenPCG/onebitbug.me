@@ -53,7 +53,7 @@ DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 
 FEED_DOMAIN = SITEURL
 
-THEME = 'themes/gum'
+THEME = 'themes/svbhack'
 
 # don't guess category from folder name
 USE_FOLDER_AS_CATEGORY = False

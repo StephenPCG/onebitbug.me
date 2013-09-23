@@ -1,3 +1,6 @@
 [submodule "plugins"]
 	path = plugins
 	url = git://github.com/getpelican/pelican-plugins
+[submodule "themes/svbhack"]
+	path = themes/svbhack
+	url = git@github.com:StephenPCG/pelican-svbhack.git
