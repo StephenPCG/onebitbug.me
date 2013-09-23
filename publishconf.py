@@ -15,10 +15,10 @@ RELATIVE_URLS = False
 
 USER_LOGO_URL = SITEURL + '/static/images/pages/snsface.png'
 
-FEED_ATOM = 'feeds/atom.xml'
-FEED_ALL_ATOM = 'feeds/all.atom.xml'
-CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
-FEED_RSS = 'feeds/rss.xml'
-FEED_ALL_RSS = 'feeds/all.rss.xml'
-CATEGORY_FEED_RSS = 'feeds/%s.rss.xml'
-FEED_MAX_ITEMS = 10
+FEED_ATOM = 'feed/index.html'
+FEED_ALL_ATOM = 'feed/all.atom.xml'
+CATEGORY_FEED_ATOM = 'feed/%s.atom.xml'
+FEED_RSS = None
+FEED_ALL_RSS = None
+CATEGORY_FEED_RSS = None
+FEED_MAX_ITEMS = 5
