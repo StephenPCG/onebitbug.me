@@ -47,7 +47,7 @@ pushd $__script_dir/.. >> $logfile
 log_echo "invoking: git pull"
 git pull |& tee -a $logfile
 
-# `make html` will first cleanup output/, if the web root directly point here,
+# `make publish` will first cleanup output/, if the web root directly point here,
 # it will cause a short period of 404, and if make failed, things goes worse.
 # so point let's make this structure:
 # $code_root/
@@ -55,10 +55,10 @@ git pull |& tee -a $logfile
 #    |- webroot/
 #    |-   output-$(date +%s)
 #    |-   onebitbug.me --> output-%current%
-# when a new `make html` succeed, copy output/ to webroot/output-$(date +%s)
+# when a new `make publish` succeed, copy output/ to webroot/output-$(date +%s)
 # alter link target of onebitbug.me to output-%new%, remove output-%old%
-log_echo "invoking: make html..."
-if make html >> $logfile; then
+log_echo "invoking: make publish..."
+if make publish >> $logfile; then
     new="output-$(date +%s)"
     cp -ar output webroot/$new
     old=$(readlink webroot/onebitbug.me 2>/dev/null)
