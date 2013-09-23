@@ -1,8 +1,8 @@
 Title: Biography
 Author: Zhang Cheng
 Slug: biography
+Date: 2012-04-01
 
-<img src="/static/images/pages/snsface.png" class="right"/>
 ## Contact
 * __Email__: base64 -D <<< c3RlcGhlbnBjZ0BnbWFpbC5jb20K
 * __Tel__: (+86) 158-5697-7094
