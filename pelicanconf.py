@@ -68,3 +68,6 @@ DISPLAY_CATEGORIES_ON_MENU = False
 
 PLUGIN_PATH = "plugins"
 PLUGINS = ['neighbors']
+
+# python-markdown extensions, see: http://pythonhosted.org/Markdown/extensions/index.html
+MD_EXTENSIONS = ['codehilite','extra']

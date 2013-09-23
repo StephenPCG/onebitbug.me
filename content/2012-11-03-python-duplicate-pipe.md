@@ -9,7 +9,7 @@ It’s sometimes convenient to pipe output of one program simultaneously to seve
 
 In Bash script, it’s quite simple. Create two (or more) fifo files, use tee to duplicate procuder program’s stdout to fifo files:
 
-```
+```sh
 mkfifo fifo1 fifo2
 producer | tee fifo1 fifo2 >/dev/null &
 customer1 < fifo1 &
@@ -23,13 +23,13 @@ But there are two cons:
 * it requires to run each program in backend, and wait explicitly.
 
 However, with bash, we can do it more elegantly:
-```
+```sh
 producer | tee >(fifo1) >(fifo2) >/dev/null
 ```
 
 This time, I have the same problem to solve in python. A couple of googleing didn’t find me any library which provide a method to duplicate PIPE. So I write one myself.
 
-```
+```python
 from threading import Thread
 from subprocess import Popen, PIPE
 

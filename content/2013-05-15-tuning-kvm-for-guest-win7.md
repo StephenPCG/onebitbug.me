@@ -16,8 +16,8 @@ MacbookAir终究太小了，出差旅行不错、坐床上看电视写博客不�
 这次折腾kvm，在显卡和网络方面都有了改进，各项表现基本满意，除了不支持3D加速/Areo效果外，跟VMware差不了多少了。 本文中所提到的kvm版本为Debian 1.4.0+dfsg-1exp，内核版本为Debian 3.8.5-1~experimental.1。
 
 
-*优化网络*
-关键字：vhost_net
+##### 优化网络
+**关键字**：`vhost_net`
 
 根据kvm wiki[这个页面][1]，使用vhost会大大提高传输速度。 我简单做了下测试，分别用下面两种参数启动机器，再比较传输速度：
 
@@ -26,10 +26,10 @@ MacbookAir终究太小了，出差旅行不错、坐床上看电视写博客不�
 
 跟主机同网段的其他机器裸拷数据，前者的速度只有100mbps左右，而后者可以达到600mbps，效果非常明显。 vhost的文档并不多，经过自己尝试，似乎只有tap模式可以用。 而我的虚拟机之前是这样的，一个user类型的网卡，guest系统设置固定IP，然后通过smb将host系统上的一个目录 映射为网络驱动器D盘，将所有重要数据保存在D盘。而这个网卡的速度显然对系统的性能影响会很大。 因此，这里要优化时，就要避开用user类型的网卡，改用tap，但又要尽可能不跟外界网络发生冲突，因此选择这样的方法：
 
-* 主机里建两个桥：vnet0, vnet1
-* eth0 –> vnet0
-* 虚拟机两块tap网卡，一块kinet0，桥接到vnet0上，上外网
-* 另外一块khost0，桥接到vnet1，跟主机内部通信使用。
+* 主机里建两个桥：`vnet0`, `vnet1`
+* `eth0` –-> `vnet0`
+* 虚拟机两块`tap`网卡，一块`kinet0`，桥接到`vnet0`上，上外网
+* 另外一块`khost0`，桥接到`vnet1`，跟主机内部通信使用。
 
 配置文件如下：
 
@@ -108,8 +108,8 @@ sudo qemu-system-x86_64 \
     ${other_options}
 ```
 
-*显卡优化*
-关键字：qxl、spice 主要参考了[这个页面][2]。
+##### 显卡优化
+**关键字**：`qxl`、`spice` 主要参考了[这个页面][2]。
 系统使用-vga qxl，并给guest os安装spice驱动。
 具体需要的文件和使用方法，可以参考前面所给的链接，以及[spice的主页][3]。
 这里直接给出有关的参数：
@@ -124,8 +124,8 @@ qemu-system-x86_64 \
 
 这是最终的参数，在此之前，需要先安装guest系统，安装spice guest组件等，过程都略过，很简单。
 
-*USB*
-关键字：ehci
+##### USB
+**关键字**：`ehci`
 
 主要参考[这个页面][4]。
 较新版本的kvm已经支持usb2.0了。这里我需要将一个usb2.0的摄像头映射到虚拟机中：
@@ -141,7 +141,7 @@ qemu-system-x86_64 \
 
 <img style="max-width: 80%" src="/static/images/posts/2013-04-15/win7-score.png" />
 
-*Assigning physical VGA adapters*
+##### Assigning physical VGA adapters
 
 这次买机器，选择CPU时，特别关注了vt-d技术，以及kvm的支持情况。
 其实最关心的是显卡的pass through。 
