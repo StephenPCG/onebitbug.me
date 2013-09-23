@@ -15,7 +15,7 @@ RELATIVE_URLS = False
 
 USER_LOGO_URL = SITEURL + '/static/images/pages/snsface.png'
 
-FEED_ATOM = 'feed/index.html'
+FEED_ATOM = 'feed/atom.xml'
 FEED_ALL_ATOM = 'feed/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feed/%s.atom.xml'
 FEED_RSS = None
