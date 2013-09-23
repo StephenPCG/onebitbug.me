@@ -4,3 +4,6 @@
 [submodule "themes/svbhack"]
 	path = themes/svbhack
 	url = git@github.com:StephenPCG/pelican-svbhack.git
+[submodule "themes/octopress"]
+	path = themes/octopress
+	url = git@github.com:StephenPCG/pelican-octopress-theme.git

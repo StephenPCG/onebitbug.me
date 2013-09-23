@@ -47,7 +47,7 @@ DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 
 FEED_DOMAIN = SITEURL
 
-THEME = 'themes/svbhack'
+THEME = 'themes/octopress'
 USER_LOGO_URL = SITEURL + '/static/images/pages/snsface.png'
 TAGLINE = 'SA & OpsDev. <br />Proudly working @Cloudacc Inc.'
 FAVICON_URL = '/static/images/blog/favicon.ico'
