@@ -1,6 +1,6 @@
 Title: Tuning KVM for Guest OS Win7
 Slug: tuning-kvm-for-guest-win7
-Date: 2013-05-15
+Date: 2013-04-15
 Category: Linux
 
 MacbookAir终究太小了，出差旅行不错、坐床上看电视写博客不错，但要向干点活还是不舒服。 这周买了台台式机，配置还算比较高端，i7 3770、骇客神条16G，另外忍痛放血买了两个不错的显示器。
@@ -139,7 +139,7 @@ qemu-system-x86_64 \
 
 其他参数基本跟以前用的一样，没有太大的变化。不过spice的表现令人十分满意，以后不需要用rdesktop了。 给个系统评级的截图：
 
-<img style="max-width: 80%" src="/static/images/posts/2013-04-15/win7-score.png" />
+{% img center /static/images/posts/2013-04-15/win7-score.png %}
 
 #### Assigning physical VGA adapters
 
