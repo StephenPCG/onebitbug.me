@@ -61,7 +61,7 @@ git submodule update |& tee -a $logfile
 # alter link target of onebitbug.me to output-%new%, remove output-%old%
 log_echo "invoking: make publish..."
 if make publish >> $logfile; then
-    new="output-$(date +%s)"
+    new="output-$(date +%Y%m%d%H%M%S)"
     cp -ar output webroot/$new
     old=$(readlink webroot/onebitbug.me 2>/dev/null)
     ln -snf $new webroot/onebitbug.me
