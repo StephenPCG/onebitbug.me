@@ -7,26 +7,24 @@ Date: 2012-04-01
 ## Contact
 * __Email__: base64 -D <<< c3RlcGhlbnBjZ0BnbWFpbC5jb20K
 * __Tel__: (+86) 158-5697-7094
-* __MSN__: zhang54112 (AT) msn.com
-* __Addr__: 230027, E3#421, West campus of USTC, Hefei, Anhui Province, P.R.China
+* __Addr__: Haidian District, Beijing
 
 ## Education
-* 2010 - 2013 ME of CS, Embedded System, University of Science and Technology of China, Hefei, China
+* 2010 - 2013 ME of CS, Embedded System, University of Science and Technology of China, Hefei, China (Quited)
 * 2006 - 2010 Bachelor of CS, Universy of Science and Technology of China, Hefei, China
 * 2003 - 2006 Nanjing High School, Jiangyin, China
 
 ## Work Experience
-* 2012.03 - now, **Cloudacc Interactive, Inc.**, _Beijing_
+* 2012.03 - now, **OpsDev** && **SA**, **Cloudacc Interactive, Inc.**, _Beijing_
     * Working at Cloudacc Interactive, Inc. 
-* 2011.09 - 2012.02, **Linux Deepin Dev Team**, _Wuhan_
-    * Working in Linux Deepin Dev Team.
-* Apr-Sep 2010, **Internship in Microsoft Research Asia**, _Beijing_
-    * Interned in Multimedia Computing group, mentored by [Tao Mei][1]. 
-      Mainly worked on multimedia application for mobile devices.
+* 2011.09 - 2012.02, **SA**, **Linux Deepin Dev Team**, _Wuhan_
+    * Developed the [daily build system][11]. Responsible for building debian packages.
+* Apr-Sep 2010, **Intern**, **Microsoft Research Asia**, _Beijing_
+    * Worked on multimedia applications for mobile devices in Multimedia Computing group, mentored by [Tao Mei][1].
 
-## Project Experience
+## Project Experience (During school days)
 * 2009 - 2011, **Ethernet Boot Service for USTC Campus**, _USTC, Hefei_
-    * Developing an Ethernet boot service, so people in USTC campus can boot their computer via LAN 
+    * Developed an Ethernet boot service, so people in USTC campus can boot their computer via LAN 
       to install Linux, experience Linux without installation, repair system, etc.
 * 2010.01 - 2011.08, **Improvement of reliability and maintainability for Linux Kernel**, _Embedded System Lab. (ESL), USTC, Hefei_
     * Working on dead-lock detection, abnormal scheduling detection,
@@ -50,24 +48,22 @@ Date: 2012-04-01
       motors and AVR mega16 chips as controller, in collaboration with 3 other classmates.
       Mainly responsible for controlling algorithm design and implementation.
 
-## Social Activities
+## Social Activities (During school days)
 * Vice president [Linux User Group @USTC][3]
 * Maintainer of [Open Source Software Mirrors][4] of USTC
 * Maintainer and developer of [PXE Service][5] of USTC
 * Administrator of [Freeshell Service][6] of USTC
+    * _NOTE_ [Bojie Li][10] has redeveloped the freeshell service.
 * Board manager of [Linux][7] and [Ansic][8] of [USTCBBS][9]
-
-## Skills
-* 4 yrs’ experience with C programming language, proficient of Python, C++ and Java, accomplished more than 100,000 lines’ code.
-* Experienced in both Intel and MIPS assembly language.
-* Can write sophisticated programs quickly in both Windows and *nix development environment.
 
 [1]: http://research.microsoft.com/en-us/people/tmei/default.aspx
 [2]: http://staff.ustc.edu.cn/~yuzhang/compiler/index.html
 [3]: http://lug.ustc.edu.cn/
 [4]: http://mirrors.ustc.edu.cn/
 [5]: http://pxe.ustc.edu.cn/
-[6]: ssh:freeshell.ustc.edu.cn
+[6]: http://freeshell.ustc.edu.cn
 [7]: http://bbs.ustc.edu.cn/cgi/bbstdoc?board=Linux 
 [8]: http://bbs.ustc.edu.cn/cgi/bbstdoc?board=AnsiC
 [9]: http://bbs.ustc.edu.cn/
+[10]: http://boj.blog.ustc.edu.cn/index.php/whoami/
+[11]: https://github.com/StephenPCG/Deepin-System
