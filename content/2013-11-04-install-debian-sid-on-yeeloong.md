@@ -62,3 +62,4 @@ Debian的wiki上已经有很完整的[教程](https://wiki.debian.org/DebianYeel
 * flash：唉，仅发布二进制的软件都太蛋疼了，基本上意味着小众架构很难得到支持。
 看到安恒的源里有一个adobe flash player的二进制，但还没有花时间去adobe官网找。
 * java：其实我从没用过openjdk，不知道是否好用。。。
+* 无线：貌似每次开机都要按Fn+F5来激活无线设备，看看是否有方法开机自动激活设备。
