@@ -1,4 +1,4 @@
-Title: Use nginx as a HTTP Gateway
+Title: Use nginx as an HTTP Gateway
 Slug: nginx-as-a-gateway
 Date: 2013-10-26 14:46
 Category: nginx
