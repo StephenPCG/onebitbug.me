@@ -1,6 +1,6 @@
 Author: Stephen Zhang
 Title: Return to MySQL
-Category: Others
+Category: Other
 Tags: MySQL, sqlite
 guid: http://onebitbug.me/?p=23
 Slug: return-to-mysql

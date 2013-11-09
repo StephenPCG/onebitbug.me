@@ -1,7 +1,7 @@
 Title: ngx.location.capture与fastcgi的一个问题
 Slug: lua-ngx-location-capture-meets-fastcgi
 Date: 2013-10-10 22:18
-Category: nginx
+Category: Nginx
 
 标题起的不太好，但是一时也想不到简单的句子来概括这个问题。
 解释问题之前，先描述一下我的需求吧。

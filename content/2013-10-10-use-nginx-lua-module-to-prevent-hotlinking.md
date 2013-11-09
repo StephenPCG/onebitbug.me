@@ -1,7 +1,7 @@
 Title: 用nginx lua模块做m3u8防盗链
 Slug: use-nginx-lua-module-to-prevent-hotlinking
 Date: 2013-10-10 23:47
-Category: nginx
+Category: Nginx
 
 刚写了一篇文章提到了nginx的lua模块，顺手再写一篇介绍一下我们的一个具体的应用。
 

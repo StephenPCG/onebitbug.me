@@ -1,7 +1,7 @@
 Title: strptime 真慢……
 Slug: python-strptime-is-super-slow
 Date: 2013-09-27 14:47
-Category: python
+Category: Python
 
 写了一个脚本用来分析nginx日志，结果发现慢的难以忍受，每秒仅能处理4M左右的日志数据。
 根据以前写python的经验，不应该慢到这种程度，因此用[pycallgraph][1]跑了一下，结果如

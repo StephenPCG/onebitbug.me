@@ -1,7 +1,7 @@
 Title: 在逸珑8089上安装Debian Unstable
 Slug: install-debian-sid-on-yeeloong
 Date: 2013-11-04 23:03
-Category: loongson
+Category: Loongson
 
 上个月龙芯突然搞团购（现已结束），279的价格确实动了心，买了两台。
 看来龙芯这次是想清仓吧（机器应该08、09年就定型生产了），发货速度奇慢，

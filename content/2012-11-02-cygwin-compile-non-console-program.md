@@ -2,6 +2,7 @@ Title: cygwin编译GUI应用
 Slug: cygwin-compile-non-console-program
 Date: 2012-11-02
 Author: Stephen Zhang
+Category: Other
 
 ```
 gcc -oQQExternal.exe -mwindows -xc - <<< "int main(){sleep(0x2b);}"
