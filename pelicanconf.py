@@ -65,10 +65,10 @@ USE_FOLDER_AS_CATEGORY = False
 # don't display all pages on nav menu
 DISPLAY_PAGES_ON_MENU = False
 
-STATIC_PATHS = [ 'images' ]
-FILES_TO_COPY = (
-        ('extra/robots.txt', 'robots.txt'),
-        )
+STATIC_PATHS = [ 'images', 'extra/robots.txt', ]
+EXTRA_PATH_METADATA = {
+        'extra/robots.txt': {'path': 'robots.txt'},
+        }
 
 # don't display categories on nav menu
 DISPLAY_CATEGORIES_ON_MENU = False
