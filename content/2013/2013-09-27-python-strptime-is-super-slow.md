@@ -7,7 +7,7 @@ Category: Python
 根据以前写python的经验，不应该慢到这种程度，因此用[pycallgraph][1]跑了一下，结果如
 下图（由于图片太大，可以下载到本地查看）：
 
-{% img /static/images/posts/2013-09-27/pycallgraph-1.png %}
+{% img /images/posts/2013-09-27/pycallgraph-1.png %}
 
 从图中可以看到，75%以上的时间都消耗在了`strptime()`这个函数上了。被调用的这行代码如下：
 
@@ -24,7 +24,7 @@ while a-big-loop:
 
 再次运行pycallgraph的结果如下图（两图的日志样本不相同，上图日志1382695行，本图1823525行）：
 
-{% img /static/images/posts/2013-09-27/pycallgraph-2.png %}
+{% img /images/posts/2013-09-27/pycallgraph-2.png %}
 
 不过既然发现了这个问题，不妨做一些实验，看看如何能够提高处理这种格式时间戳的效率，
 这毕竟是一个很常见的需求。我们来做一些测试。

@@ -139,7 +139,7 @@ qemu-system-x86_64 \
 
 其他参数基本跟以前用的一样，没有太大的变化。不过spice的表现令人十分满意，以后不需要用rdesktop了。 给个系统评级的截图：
 
-{% img center /static/images/posts/2013-04-15/win7-score.png %}
+{% img center /images/posts/2013-04-15/win7-score.png %}
 
 #### Assigning physical VGA adapters
 

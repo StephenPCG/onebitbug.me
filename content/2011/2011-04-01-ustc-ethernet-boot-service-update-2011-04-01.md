@@ -20,7 +20,7 @@ Today, we upgrade gPXE to [iPXE][1]. iPXE is the official replacement of gPXE.
 It is developed by people who originally developed gPXE (which envolved from Etherboot).
 Unfortunately, the gpxe.org and etherboot.org domains are owned by an individual who wishes to exercise a high degree of control over the project and the codebase, so in April 2010 the decision was taken to create a new project named iPXE, using theexisting code base as a starting point. Since the two project diverged, development on gPXE has stopped, while iPXE is very actively updated.
 
-{% img /static/images/posts/2011-04-01/ipxe.png %}
+{% img /images/posts/2011-04-01/ipxe.png %}
 
 ## Update Contents
 
@@ -74,7 +74,7 @@ If you want native PXE boot environment, you have to set up tftp and dhcp. See i
 
 Enjoy it!
 
-{% img /static/images/posts/2011-04-01/ipxe1.png %}
+{% img /images/posts/2011-04-01/ipxe1.png %}
 
  [1]: http://ipxe.org/
  [3]: http://home.eunet.no/pnordahl/ntpasswd/

@@ -7,13 +7,13 @@ Category: Nginx
 
 Nginx是一款非常轻量级的HTTP Server，常用于Load Balance和App Router。
 
-{% img /static/images/posts/2013-10-26/nginx-lb-router.png %}
+{% img /images/posts/2013-10-26/nginx-lb-router.png %}
 
 在国内这样奇葩的网络环境下，一些较大的网站部署时，Nginx和App服务器往往不在一个机房。
 通常App服务器部署在带宽成本较高的BGP机房，而网站前端放在价格较便宜的单线机房，
 CDN也是这样的一种情形。因此结构如下：
 
-{% img /static/images/posts/2013-10-26/nginx-cache-lb-router.png %}
+{% img /images/posts/2013-10-26/nginx-cache-lb-router.png %}
 
 这里，Nginx与Cache在同一个机房，而与App在不同的机房（可能跨地区、跨ISP）。
 Cache服务器可以是squid、varnish或者其他产品，通常Cache服务器的逻辑比较简单，专注于Cache逻辑。
@@ -50,7 +50,7 @@ Cache服务器节省了大量跨机房的带宽资源（当然也顺带可以当
 
 由此启发，在Nginx这一层，我们可以做许多事情。
 
-{% img /static/images/posts/2013-10-26/nginx-modules.png %}
+{% img /images/posts/2013-10-26/nginx-modules.png %}
 
 在这里，我们可以实现许多模块，每一个模块可以是一个lua脚本，也可以是HTTP服务，也可以其他Lua能访问到得东西。
 
