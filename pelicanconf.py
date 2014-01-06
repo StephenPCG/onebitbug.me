@@ -56,7 +56,7 @@ FEED_DOMAIN = SITEURL
 THEME = 'themes/octopress'
 #USER_LOGO_URL = SITEURL + '/static/images/pages/snsface.png'
 #TAGLINE = 'SA & OpsDev. <br />Proudly working @Cloudacc Inc.'
-FAVICON_URL = 'static/images/blog/favicon2.png'
+FAVICON_URL = 'images/blog/favicon2.png'
 SEARCH_BOX = True
 
 # don't guess category from folder name
