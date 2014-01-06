@@ -8,8 +8,8 @@ Category: Linux
 Varnish有一个bug（或者说feature也许更合适一些），有一个项资源`sess_mem`，对应一个计数器`n_sess`，
 有人要用就`+1`，用完就`-1`，另外有一个函数会根据这个数字来决定是否要预分配更多的空间。
 这里，为了避免太多的性能损耗，所以对`n_sess`的操作并没有加锁。在多线程（本文中`多线程`均指软件概念上的线程，
-超线程指CPU的超线程技术）的环境下对同一个变量进行不加锁的读写肯定是有问题的，但是，因为在一段时间内`+`和`-`
-的数量相当，因此一个线程中`+`和`-`操作被其他线程吞没的概率也相当，所以最终`n_sess`距离精确值的偏差（后面称漂移）
+超线程指CPU的超线程技术）的环境下对同一个变量进行不加锁的读写肯定是有问题的，但是<del>，因为在一段时间内`+`和`-`
+的数量相当，因此一个线程中+和-操作被其他线程吞没的概率也相当，所以</del>最终`n_sess`距离精确值的偏差（后面称漂移）
 应该在一个比较小的范围内（即误差应该比较小），varnish认可这个误差，通过其他方式来定期的校准一下（例如定期
 的数一下实际被使用的`sess_mem`有多少个）这个值。
 
@@ -199,3 +199,65 @@ core id     : 3
 
 这篇文章仅给出了一个现象。而结论嘛，上面分析了一大堆都只是自己的猜测，没有数据和实验的支持。
 如果您有这方面的数据或知识，欢迎指点！
+
+<hr>
+<b style="color: red;">Update 2014-01-06 08:31</b>
+
+### Varnish的解决方案
+
+一开始我没有仔细的看varnish后续对这个问题的patch，仅根据comments猜测，将`n_sess`这个变量拆分成两个，
+一个用来加，一个用来减，粗一想，两个变量的读写被吞没的概率相当，那么偏差应该很小。
+
+代码改动大致如下：
+
+```
+volatile long counter1, counter2;
+
+iter() {
+    for () {
+        ++counter1;
+        ++counter2;
+    }
+}
+
+main() {
+    for() {
+        ...
+        print ("counter1=%ld, counter2=ld%, counter drift=%ld", counter1, counter2, counter1-counter2);
+    }
+}
+```
+
+运行结果另外大跌眼镜：
+
+```
+cpu0 vs cpu0 (1000000000 iterations in 3.91 s)... counter1=1991963611 counter2=1243470264 counter drift = 748493347
+cpu0 vs cpu1 (1000000000 iterations in 15.08 s)... counter1=1040334434 counter2=1044733665 counter drift = -4399231
+cpu0 vs cpu2 (1000000000 iterations in 15.15 s)... counter1=1052855873 counter2=1057230715 counter drift = -4374842
+cpu0 vs cpu3 (1000000000 iterations in 15.19 s)... counter1=1052209634 counter2=1063620687 counter drift = -11411053
+cpu0 vs cpu4 (1000000000 iterations in 15.65 s)... counter1=1664993829 counter2=1669152466 counter drift = -4158637
+cpu0 vs cpu5 (1000000000 iterations in 15.12 s)... counter1=1054510823 counter2=1065077182 counter drift = -10566359
+cpu0 vs cpu6 (1000000000 iterations in 15.12 s)... counter1=1061590720 counter2=1081308807 counter drift = -19718087
+cpu0 vs cpu7 (1000000000 iterations in 15.19 s)... counter1=1061120679 counter2=1088475411 counter drift = -27354732
+```
+
+* cpu0 vs cpu0的情况，counter1有0.5%的操作被吞没，counter2有38%的操作被吞没！最终漂移量7%。
+  - 对于这个结论的第一反应是，context switch的数量有这么大！每100次加法操作就至少被切出去38次
+  - 再仔细一想并不是，假设thread1读到0，被切出去了，thread2开始算，算到1w，被切出去，
+    thread1开始工作，它是从0开始的，瞬间就产生了1w点误差。
+* cpu0 vs cpu*的情况，counter1、counter2都被吞没了47%左右的操作！最终漂移量约1%。
+  - 同样的方法理解，如果在计算的过程中，两个线程都不同步缓存，那么计算结果是，
+    thread1和thread2都独立算出1b的结果，并写回，则counter1、counter2的结果都是1b。
+    而实际结果比1b大，说明中间发生了一定次数的缓存同步，多出来的6~8%是由每一次缓存同步时两边计算速度的差值的累加。
+    比如第一次同步时，thread1比thread2快了1w，则同步的结果就是counter多了1w。
+    同步之后，两边又从同一起跑线开始计算，到下一次同步，如果thread2比thread1快了1.5w，则counter的结果总共多了1w+1.5w=2.5w。
+* cpu0 vs cpu4的情况，counter1和counter2都被吞没了17%左右的操作，最终漂移量0.4%。
+  - 这个值比上一种情况大很多，应该是因为缓存同步非常频繁，根据前面估算出来的同步频率，大约每100次加减法运算就有一次同步。
+    这里验算一下差不多。
+
+昨晚得出的结论能够比较好的解释今天的结果，说明正确的可能性更大一些，很开心 :-)
+
+那么回到varnish上，varnish是怎么解决这个问题的呢？加锁。。。
+不过varnish的场景跟这个实验有一些不一样，它是只有一个线程进行加法操作，多个线程进行减法操作，
+所以就分出两个变量`n_sess_grab`、`n_sess_rel`，一个用于累加，单线程，无需锁，另一个用于递减，多线程，加锁。
+最终`n_sess = n_sess_grab - n_sess_rel` 。
