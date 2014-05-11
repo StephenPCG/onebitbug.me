@@ -1,9 +1,9 @@
 [submodule "plugins"]
 	path = plugins
-	url = git://github.com/getpelican/pelican-plugins
+	url = https://github.com/getpelican/pelican-plugins
 [submodule "themes/svbhack"]
 	path = themes/svbhack
-	url = git@github.com:StephenPCG/pelican-svbhack.git
+	url = https://github.com/StephenPCG/pelican-svbhack.git
 [submodule "themes/octopress"]
 	path = themes/octopress
-	url = git@github.com:StephenPCG/pelican-octopress-theme.git
+	url = https://github.com/StephenPCG/pelican-octopress-theme.git
