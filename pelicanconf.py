@@ -65,7 +65,7 @@ USE_FOLDER_AS_CATEGORY = False
 # don't display all pages on nav menu
 DISPLAY_PAGES_ON_MENU = False
 
-STATIC_PATHS = [ 'images', 'extra/robots.txt', ]
+STATIC_PATHS = [ 'images', 'extra/robots.txt', 'upload']
 EXTRA_PATH_METADATA = {
         'extra/robots.txt': {'path': 'robots.txt'},
         }

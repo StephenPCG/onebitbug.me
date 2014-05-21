@@ -3,50 +3,43 @@ Author: Zhang Cheng
 Slug: biography
 Date: 2012-04-01
 
-{% img right /images/pages/snsface.png %}
+{% img right /images/pages/snsface.png 180 %}
 ## Contact
-* __Email__: base64 -D <<< c3RlcGhlbnBjZ0BnbWFpbC5jb20K
+* __Email__: base64 --decode <<< c3RlcGhlbnBjZ0BnbWFpbC5jb20K
 * __Tel__: (+86) 158-5697-7094
-* __Addr__: Haidian District, Beijing
+* __Addr__: Dongcheng District, Beijing
 
 ## Education
-* 2010 - 2013 ME of CS, Embedded System, University of Science and Technology of China, Hefei, China (Quited)
-* 2006 - 2010 Bachelor of CS, Universy of Science and Technology of China, Hefei, China
-* 2003 - 2006 Nanjing High School, Jiangyin, China
+* 2010 - 2013 **Master of Engineer of CS**, _Embedded System_, _University of Science and Technology of China_, Hefei, China (Quited)
+* 2006 - 2010 **Bachelor of CS**, _Universy of Science and Technology of China_, Hefei, China
 
 ## Work Experience
-* 2012.03 - now, **OpsDev** && **SA**, **Cloudacc Interactive, Inc.**, _Beijing_
-    * Working at Cloudacc Interactive, Inc. 
-* 2011.09 - 2012.02, **SA**, **Linux Deepin Dev Team**, _Wuhan_
-    * Developed the [daily build system][11]. Responsible for building debian packages.
-* Apr-Sep 2010, **Intern**, **Microsoft Research Asia**, _Beijing_
+* 2012.03 - 2014.05, **System Administrator**, _Cloudacc Interactive, Inc._, Beijing
+    * Setup a private deb package repository with reprepro, built deb packages to manage system settings and deploy applications.
+    * Bootstrap saltstack to make managing system easier while number of servers bursting. Skilled in saltstack, and have good knowledge of other configuration management systems.
+    * Built a CDN system to distribute video files using varnish and nginx, supporting more than 50 Gbps bandwidth at peak time.
+    * Setup a web content cache cluster using varnish with complex caching rules, serving up to 500k rps load. Experienced in using and tuning varnish.
+    * Developed an HTTP gateway for sending email (postfix as backend) and SMS (smstools as backend), so other applications may send alerts easier.
+    * Developed a service checking daemon to make application monitoring easier, as a supplement of nagios.
+    * Built and maintained an LXC virtual machine cluster in office, developers can apply for containers in web browser by self. have good knowledge of virtual technologies and tools.
+    * Setup and maintained the openldap server for the company, integrated applications with it.
+    * Setup and maintained the office gateway - a Debian box with customized iptables and iproute2 rules. Experienced with iptables and iproute2, have good knowledge of networking stack.
+    * Developed many other tools and applications with python during two years, proficient in python programming.
+* 2011.09 - 2012.02, **System Engineer**, _Linux Deepin Dev Team_, Wuhan
+    * Created [scripts to build Deepin cdimage][11] and setup daily-build task.
+    * Manage [Deepin package repository][12] with reprepro.
+    * Maintained most of Deepin addon packages, skilled with pbuilder and the packaging toolchain.
+    * Setup a PXE environment to make testing daily-build cdimage easier.
+* Apr-Sep 2010, **Intern**, _Microsoft Research Asia_, Beijing
     * Worked on multimedia applications for mobile devices in Multimedia Computing group, mentored by [Tao Mei][1].
 
-## Project Experience (During school days)
-* 2009 - 2011, **Ethernet Boot Service for USTC Campus**, _USTC, Hefei_
-    * Developed an Ethernet boot service, so people in USTC campus can boot their computer via LAN 
-      to install Linux, experience Linux without installation, repair system, etc.
-* 2010.01 - 2011.08, **Improvement of reliability and maintainability for Linux Kernel**, _Embedded System Lab. (ESL), USTC, Hefei_
-    * Working on dead-lock detection, abnormal scheduling detection,
-      filesystem restoring after crash, etc, to improve the reliability and maintainability of Linux Kernel.
-* 2009.12 - 2010.06, **Android Intrusion Detection System**, _USTC, Suzhou_
-    * Designed an intrusion detection system in mobile devices, 
-      which tries to detect viruses from contextual information sch as phone calls,
-      SMS, bluetooth connections, etc. The designment was based on Android.
-* 2010.01 - 03, **JOS of MIT Open Cource Ware**
-    * Wrote an OS with only skeleton given, did the hard work for memory management,
-      user-level environment, preemptive multitasking,
-      filesystem and spawn, IPC, implemented a simple driver for e100 NIC.
-* 2009.07 - 09, **MIPS N32 port of Debian buildd**, _Institute of Computing Technology (ICT), Chinese Academy of Science (CAS), Beijing_
-    * Ported the Debian autobuilder network software (buildd) to Loongson,
-      a MIPS-based CPU designed by ICT, so it can build packages with MIPS N32 ABI for Loongson.
-* 2009.04 - 06, **SkipOOMiniJOOL Compiler**, _USTC, Hefei_
-    * Developed an MIPS assembly code generator as part of a complete compiler for a C-like
-      language named [SkipOOMiniJOOL][2], successfully run on a Loongson computer.
-* 2007.07 - 09, **Robo Game**, _USTC, Hefei_
-    * Built a complete robot from scratch with sensors,
-      motors and AVR mega16 chips as controller, in collaboration with 3 other classmates.
-      Mainly responsible for controlling algorithm design and implementation.
+## Project and Activities
+* _[nginx-lua-simpleauth-module][13]_. This nginx lua module provides a cookie cache for authn results and a group based authz configuration.
+* _[Personal Package Archive][14]_. A ppa with many packages not shipped with debian official repository. It is not advertised since some of the packages are not tested.
+* _[extend-left-box][15]_. A gnome-shell extension to extend left box of top panel. The project discontinued as I no longer use gnome-shell.
+* _Early developer of [USTC Campus Ethernet Boot Service][5]_. A PXE boot service in USTC campus, people can boot their computer via LAN to install Linux, experience distros without installation, repair system, etc. Also [made an live debian system]({filename}../2011/2011-04-06-ustc-cloud-live-debian.md) which mount an ftp space as home directory so people can boot 'their own' system everywhere.
+* _[Maintainer of USTC Open Source Mirror][4]_. It has the highest traffic among open source mirror sites in China, and is official mirror of many distros and projects, e.g. Debian, Ubuntu, etc. Did a lot of work tuning kernel, filesystem and applications for high traffic load.
+* _RoboGame_. It is an traditional robot contest in USTC campus. Built a complete robot from scrach with sensors, motors and AVR mega16 chips as controller, in collaboration with 3 other classmates. i was mainly responsible for controlling algorithm design and implementation.
 
 ## Social Activities (During school days)
 * Vice president [Linux User Group @USTC][3]
@@ -67,3 +60,7 @@ Date: 2012-04-01
 [9]: http://bbs.ustc.edu.cn/
 [10]: http://boj.blog.ustc.edu.cn/index.php/whoami/
 [11]: https://github.com/StephenPCG/Deepin-System
+[12]: http://packages.linuxdeepin.com/deepin/
+[13]: https://github.com/StephenPCG/nginx-lua-simpleauth-module
+[14]: http://ppa.onebitbug.me/
+[15]: https://github.com/StephenPCG/extend-left-box
