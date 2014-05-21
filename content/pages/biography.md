@@ -49,6 +49,10 @@ Date: 2012-04-01
     * _NOTE_ [Bojie Li][10] has redeveloped the freeshell service.
 * Board manager of [Linux][7] and [Ansic][8] of [USTCBBS][9]
 
+##
+
+[download](../upload/resume.201405.pdf).
+
 [1]: http://research.microsoft.com/en-us/people/tmei/default.aspx
 [2]: http://staff.ustc.edu.cn/~yuzhang/compiler/index.html
 [3]: http://lug.ustc.edu.cn/
