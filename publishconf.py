@@ -10,7 +10,7 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = 'http://onebitbug.me'
+SITEURL = 'https://onebitbug.me'
 RELATIVE_URLS = False
 
 USER_LOGO_URL = SITEURL + '/static/images/pages/snsface.png'
