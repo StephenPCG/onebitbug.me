@@ -1,0 +1,8 @@
+# this file is intended to store private settings that shouldn't
+# be commited to public git repo.
+
+DEVELOP:
+  PLUGIN_PATH: "../pelican-plugins"
+
+PUBLISH:
+  PLUGIN_PATH: "../pelican-plugins"
