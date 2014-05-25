@@ -26,68 +26,67 @@ Varnish有一个bug（或者说feature也许更合适一些），有一个项资
 
 耳闻为虚，眼见为实，上面的ticket中只给了结论，因此我也亲自写代码实现了一下。代码如下：
 
-```
-#define _GNU_SOURCE
-#include <stdio.h>
-#include <stdlib.h>
-#include <pthread.h>
-#include <time.h>
-
-volatile long counter = 0;
-
-struct thread_arg{
-    int cpu;
-    long count;
-};
-
-void* iter(void* arg) {
-    int cpu = ((struct thread_arg*)arg) -> cpu;
-    long i = ((struct thread_arg*)arg) -> count;
-
-    cpu_set_t cpuset;
-    pthread_t thread = pthread_self();
-
-    CPU_ZERO(&cpuset);
-    CPU_SET(cpu, &cpuset);
-    if (pthread_setaffinity_np(thread, sizeof(cpu_set_t), &cpuset) != 0)
-        printf("pthread_getaffinity_np() failed.");
-
-    for (; i>0; --i) {
-        ++counter;
-        --counter;
+    :::c
+    #define _GNU_SOURCE
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <pthread.h>
+    #include <time.h>
+    
+    volatile long counter = 0;
+    
+    struct thread_arg{
+        int cpu;
+        long count;
+    };
+    
+    void* iter(void* arg) {
+        int cpu = ((struct thread_arg*)arg) -> cpu;
+        long i = ((struct thread_arg*)arg) -> count;
+    
+        cpu_set_t cpuset;
+        pthread_t thread = pthread_self();
+    
+        CPU_ZERO(&cpuset);
+        CPU_SET(cpu, &cpuset);
+        if (pthread_setaffinity_np(thread, sizeof(cpu_set_t), &cpuset) != 0)
+            printf("pthread_getaffinity_np() failed.");
+    
+        for (; i>0; --i) {
+            ++counter;
+            --counter;
+        }
     }
-}
-
-int main(int argc, char** argv) {
-    pthread_t thread1, thread2;
-    struct thread_arg arg1, arg2;
-    long count = 1000000000L;
-    clock_t start, end;
-
-    arg1.count = count;
-    arg1.cpu = 0;
-    arg2.count = count;
-
-    int cpu = 0;
-
-    for (cpu=0; cpu<8; cpu++) {
-        counter = 0;
-        arg2.cpu = cpu;
-
-        start = clock();
-        pthread_create(&thread1, NULL, iter, (void*)&arg1);
-        pthread_create(&thread2, NULL, iter, (void*)&arg2);
-        pthread_join(thread1, NULL);
-        pthread_join(thread2, NULL);
-        end = clock();
-
-        printf("cpu0 vs cpu%d (%ld iterations in %.2f s)... counter drift = %ld\n",
-                arg2.cpu, count, (end-start)*1.0/CLOCKS_PER_SEC, counter);
+    
+    int main(int argc, char** argv) {
+        pthread_t thread1, thread2;
+        struct thread_arg arg1, arg2;
+        long count = 1000000000L;
+        clock_t start, end;
+    
+        arg1.count = count;
+        arg1.cpu = 0;
+        arg2.count = count;
+    
+        int cpu = 0;
+    
+        for (cpu=0; cpu<8; cpu++) {
+            counter = 0;
+            arg2.cpu = cpu;
+    
+            start = clock();
+            pthread_create(&thread1, NULL, iter, (void*)&arg1);
+            pthread_create(&thread2, NULL, iter, (void*)&arg2);
+            pthread_join(thread1, NULL);
+            pthread_join(thread2, NULL);
+            end = clock();
+    
+            printf("cpu0 vs cpu%d (%ld iterations in %.2f s)... counter drift = %ld\n",
+                    arg2.cpu, count, (end-start)*1.0/CLOCKS_PER_SEC, counter);
+        }
+    
+        return 0;
     }
-
-    return 0;
-}
-```
 
 编译运行：
 ```
