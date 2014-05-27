@@ -47,12 +47,24 @@ PAGE_SAVE_AS = '{slug}/index.html'
 SUBCATEGORY_SAVE_AS = 'subcategory/{savepath}/index.html'
 SUBCATEGORY_URL = 'subcategory/{savepath}/'
 
-USE_FOLDER_AS_CATEGORY = False
+# custom url for special articles, for "Blog" and "Essays", keep the default
+CUSTOM_ARTICLE_URLS = {
+        "Shares": {
+                "SAVE_AS": "shares/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html",
+                "URL": "shares/{date:%Y}/{date:%m}/{date:%d}/{slug}/",
+            },
+        "Wiki": {
+                "SAVE_AS": "wiki/{slug}/index.html",
+                "URL": "wiki/{slug}/",
+            },
+    }
+
+USE_FOLDER_AS_CATEGORY = True
 DISPLAY_PAGES_ON_MENU = False
 DISPLAY_CATEGORIES_ON_MENU = False
 
 STATIC_PATHS = ['images', 'upload', 'extra']
-FILENAME_METADATA = r'(?P<date>\d{4}-\d{2}-\d{2})-(?P<slug>.*)'
+FILENAME_METADATA = r'((?P<date>\d{4}-\d{2}-\d{2})?)-(?P<slug>.*)'
 EXTRA_PATH_METADATA = {
     'extra/robots.txt': {'path': 'robots.txt'},
     'extra/favicon.ico': {'path': 'favicon.ico'},
@@ -132,8 +144,8 @@ MENUITEMS = (
 SHOW_ARTICLE_NEIGHBORS = True
 SHOW_DISQUS_COMMENT_COUNT = True
 
-ARTICLE_ASIDES = ['recentpost', 'tags', 'categories', 'links']
+ARTICLE_ASIDES = ['recentpost', 'categories', 'tags', 'links', 'github']
 PAGE_ASIDES = []
-INDEX_ASIDES = ['github', 'recentpost', 'categories', 'social', 'links']
+INDEX_ASIDES = ['recentpost', 'categories', 'tags', 'links', 'github']
 
 # vim:ai:et:sts=4:sw=4:
