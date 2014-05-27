@@ -2,6 +2,7 @@ Title: cygwin编译GUI应用
 GitTime: off
 Slug: cygwin-compile-non-console-program
 Date: 2012-11-02
+Tags: cygwin
 Author: Stephen Zhang
 
 ```

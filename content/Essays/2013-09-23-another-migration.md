@@ -1,6 +1,7 @@
 Title: 又搬家了
 GitTime: off
 Slug: another-migration
+Tags: blog
 Date: 2013-09-23
 
 在burstnet上买的一年vps就要到期了，准备搬家。这次不打算放在国外了，在国内找个主机将就了。

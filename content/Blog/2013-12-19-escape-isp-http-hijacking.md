@@ -1,6 +1,7 @@
 Title: 绕过运营商HTTP劫持
 GitTime: off
 Slug: escape-isp-http-hijacking
+Tags: linux, firewall, iptables
 Date: 2013-12-19 19:30
 
 中国的网络是奇葩的，原因之一是有奇葩的屌丝运营商。

@@ -1,7 +1,7 @@
 Author: Stephen Zhang
 GitTime: off
 Title: Introducing Linux Kernel Symbols
-Tags: export, kallsyms, kernel symbol, LKM, procfs, sequence file
+Tags: kallsyms, linux kernel, lkm, procfs
 guid: http://onebitbug.me/?p=21
 Slug: introducing-linux-kernel-symbols
 

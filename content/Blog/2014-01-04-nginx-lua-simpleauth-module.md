@@ -1,6 +1,7 @@
 Title: 使用Nginx的Lua模块实现简单的权限验证系统
 GitTime: off
 Slug: nginx-lua-simpleauth-module
+Tags: nginx, lua, linux
 Date: 2014-01-04 22:22
 
 Nginx本身是一个很单纯的http服务器，其附加功能少的可怜，也正因为单纯，nginx才能如此高效。
@@ -47,6 +48,7 @@ authn和authz有时会一起实现，有时也会分开实现。这两者都可�
 
 使用这个模块，首先需要配置一个另外的server或location，用于真正的authn后端，其他路径的访问都用simpleauthn即可。例如：
 
+    :::nginx
     init_by_lua 'simpleauthn = require "simpleauthn_cookie"
                  simpleauthn.set_secret_key("your-secret")
                  simpleauthn.set_max_age(3600) 
@@ -80,6 +82,7 @@ authn和authz有时会一起实现，有时也会分开实现。这两者都可�
 
 用法示例：
 
+    :::nginx
     lua_package_path '/path/to/module/?.lua;;';
     init_by_lua '-- init authz
                  simpleauthz = require "simpleauthz"

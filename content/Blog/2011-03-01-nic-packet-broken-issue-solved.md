@@ -1,7 +1,7 @@
 Author: Stephen Zhang
 GitTime: off
 Title: NIC Packet Broken Issue Solved
-Tags: ethtool, loongson, rtl8169, rx offload
+Tags: ethtool, loongson, rtl8169
 guid: http://onebitbug.me/?p=19
 Slug: nic-packet-broken-issue-solved
 

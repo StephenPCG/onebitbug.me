@@ -1,7 +1,7 @@
 Author: Stephen Zhang
 GitTime: off
 Title: Return to MySQL
-Tags: MySQL, sqlite
+Tags: mysql, sqlite
 guid: http://onebitbug.me/?p=23
 Slug: return-to-mysql
 

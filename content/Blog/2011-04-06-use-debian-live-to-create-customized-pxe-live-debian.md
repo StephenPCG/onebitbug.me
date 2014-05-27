@@ -1,7 +1,7 @@
 Author: Stephen Zhang
 GitTime: off
 Title: Use debian-live to Create Customized PXE Live Debian
-Tags: chroot, debian, debian-live, linux, live, PXE
+Tags: debian, linux, pxe
 guid: http://onebitbug.me/?p=57
 Slug: use-debian-live-to-create-customized-pxe-live-debian
 

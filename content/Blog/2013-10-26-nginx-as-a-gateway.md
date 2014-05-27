@@ -1,6 +1,7 @@
 Title: Use nginx as an HTTP Gateway
 GitTime: off
 Slug: nginx-as-a-gateway
+tags: nginx, lua, linux
 Date: 2013-10-26 14:46
 
 ### 需求分析

@@ -1,7 +1,7 @@
 Author: Stephen Zhang
 GitTime: off
 Title: USTC Ethernet Boot Service Update (2011-04-01)
-Tags: gPXE, iPXE, PXE, Syslinux, USTC
+Tags: gpxe, ipxe, pxe, syslinux, ustc
 guid: http://onebitbug.me/?p=46
 Slug: ustc-ethernet-boot-service-update-2011-04-01
 

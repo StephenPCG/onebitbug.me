@@ -1,6 +1,7 @@
 Title: ngx.location.capture与fastcgi的一个问题
 GitTime: off
 Slug: lua-ngx-location-capture-meets-fastcgi
+Tags: nginx, lua, linux, debian, fastcgi
 Date: 2013-10-10 22:18
 
 标题起的不太好，但是一时也想不到简单的句子来概括这个问题。

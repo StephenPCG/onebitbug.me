@@ -1,7 +1,7 @@
 Author: Stephen Zhang
 GitTime: off
 Title: USTC Cloud Live Debian
-Tags: cloud, debian, PXE, USTC
+Tags: cloud, debian, pxe, ustc
 guid: http://onebitbug.me/?p=63
 Slug: ustc-cloud-live-debian
 

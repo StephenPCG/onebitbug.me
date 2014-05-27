@@ -1,7 +1,7 @@
 Layout: post
 GitTime: off
 Title: 软件自由日 SFD 2012 合肥站活动
-Tags: SFD, USTC LUG
+Tags: sfd, ustclug
 Slug: sfd-ustclug
 
 本文转自 [中国科学技术大学Linux用户协会][4] 活动通知。

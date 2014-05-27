@@ -1,6 +1,7 @@
 Title: strptime 真慢……
 GitTime: off
 Slug: python-strptime-is-super-slow
+tags: python
 Date: 2013-09-27 14:47
 
 写了一个脚本用来分析nginx日志，结果发现慢的难以忍受，每秒仅能处理4M左右的日志数据。

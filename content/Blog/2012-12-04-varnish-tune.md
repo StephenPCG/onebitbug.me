@@ -1,6 +1,7 @@
 Title: Varnish 调优
 GitTime: off
 Slug: varnish-tune
+Tags: varnish
 Date: 2012-12-04
 
 线上服务器使用Varnish已经有一个多月了，一直没有碰到问题，挺省心的，因此也没有比较深入的折腾Varnish。 上周由于业务变化，请求量一下子涨了很多，Varnish接二连三挂了，于是折腾了一下。

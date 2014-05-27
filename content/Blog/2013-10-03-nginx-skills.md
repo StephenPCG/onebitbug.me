@@ -1,6 +1,7 @@
 Title: 一些Nginx的使用技巧
 GitTime: off
 Slug: nginx-skills
+Tags: nginx, linux, debian
 Date: 2013-10-03 22:53
 
 使用Nginx很久了，也在好几个不同的场景使用过，逐渐有了一些心得，这篇文章整理一下。

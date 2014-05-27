@@ -33,6 +33,8 @@ DEFAULT_PAGINATION = 5
 # url stuff
 ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+ARTICLE_LANG_URL = '{date:%Y}/{date:%m}/{date:%d}/{slug}/'
+ARTICLE_LANG_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 YEAR_ARCHIVE_SAVE_AS = '{date:%Y}/index.html'
 MONTH_ARCHIVE_SAVE_AS = '{date:%Y}/{date:%m}/index.html'
 DAY_ARCHIVE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/index.html'
@@ -72,7 +74,7 @@ EXTRA_PATH_METADATA = {
 
 # python-markdown extensions,
 # see: http://pythonhosted.org/Markdown/extensions/index.html
-MD_EXTENSIONS = ['codehilite', 'extra']
+MD_EXTENSIONS = ['codehilite(css_class=pre-code)', 'extra', 'fenced_code']
 
 DELETE_OUTPUT_DIRECTORY = True
 
@@ -85,7 +87,7 @@ PAGINATION_PATTERNS = (
 
 ### plugin settings
 PLUGINS = [
-    'cjk-auto-spacing',
+    #'cjk-auto-spacing',
     'custom_article_urls',
     #'github_activity',
     'gravatar',
@@ -146,6 +148,6 @@ SHOW_DISQUS_COMMENT_COUNT = True
 
 ARTICLE_ASIDES = ['recentpost', 'categories', 'tags', 'links', 'github']
 PAGE_ASIDES = []
-INDEX_ASIDES = ['recentpost', 'categories', 'tags', 'links', 'github']
+INDEX_ASIDES = ['categories', 'tags', 'links', 'github']
 
 # vim:ai:et:sts=4:sw=4:

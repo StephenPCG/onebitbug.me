@@ -4,6 +4,7 @@ Slug: python-duplicate-pipe
 Date: 2012-11-03
 Author: Stephen Zhang
 Tags: python
+Lang: en
 
 It’s sometimes convenient to pipe output of one program simultaneously to several other programs. For example, grep two different keywords from a long time running program’s output, e.g. output of varnishncsa.
 

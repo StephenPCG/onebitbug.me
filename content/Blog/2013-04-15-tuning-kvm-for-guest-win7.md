@@ -1,6 +1,7 @@
 Title: Tuning KVM for Guest OS Win7
 GitTime: off
 Slug: tuning-kvm-for-guest-win7
+Tags: kvm, linux
 Date: 2013-04-15
 
 MacbookAir终究太小了，出差旅行不错、坐床上看电视写博客不错，但要向干点活还是不舒服。 这周买了台台式机，配置还算比较高端，i7 3770、骇客神条16G，另外忍痛放血买了两个不错的显示器。

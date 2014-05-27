@@ -1,6 +1,7 @@
 Title: 超线程竞争问题引发的思考
 GitTime: off
 Slug: think-of-hyper-threading-race-condition
+Tags: varnish
 Date: 2014-01-05 22:20
 
 ### 问题起因

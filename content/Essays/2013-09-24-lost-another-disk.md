@@ -1,6 +1,7 @@
 Title: 一个月内又坏了一块硬盘……
 GitTime: off
 Slug: lost-another-disk
+tags: ssd
 Date: 2013-09-24 23:40
 
 最近一个月，先是macbook air的SSD突然挂了，今天台式机的一块硬盘也突然挂了。

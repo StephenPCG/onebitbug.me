@@ -1,7 +1,7 @@
 Author: Stephen Zhang
 GitTime: off
 Title: ftp.cn.debian.org is there!
-Tags: debian, ftp, mirror, USTC
+Tags: debian, ftp, mirror, ustc
 guid: http://onebitbug.me/?p=70
 Slug: ftp-cn-debian-org-is-there
 

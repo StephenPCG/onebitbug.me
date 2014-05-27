@@ -1,7 +1,7 @@
 Author: Stephen Zhang
 GitTime: off
 Title: Using LKM and procfs -- Part II
-Tags: LKM, proc, procfs, Linux Kernel
+Tags: lkm, procfs, linux kernel
 guid: http://onebitbug.me/?p=17
 Slug: using-lkm-and-procfs-part-ii
 
