@@ -44,6 +44,8 @@ TAGS_URL = 'tags/'
 TAGS_SAVE_AS = 'tags/index.html'
 PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
+SUBCATEGORY_SAVE_AS = 'subcategory/{savepath}/index.html'
+SUBCATEGORY_URL = 'subcategory/{savepath}/'
 
 USE_FOLDER_AS_CATEGORY = False
 DISPLAY_PAGES_ON_MENU = False
