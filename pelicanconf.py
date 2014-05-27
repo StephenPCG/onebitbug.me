@@ -147,8 +147,8 @@ MENUITEMS = (
 SHOW_ARTICLE_NEIGHBORS = True
 SHOW_DISQUS_COMMENT_COUNT = True
 
-ARTICLE_ASIDES = ['recentpost', 'categories', 'tags', 'github']
+ARTICLE_ASIDES = ['recentpost', 'categories', 'tags', 'recentcomment', 'github']
 PAGE_ASIDES = []
-INDEX_ASIDES = ['categories', 'tags', 'github']
+INDEX_ASIDES = ['categories', 'tags', 'recentcomment', 'github']
 
 # vim:ai:et:sts=4:sw=4:
