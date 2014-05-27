@@ -53,6 +53,7 @@ STATIC_PATHS = ['images', 'upload', 'extra']
 FILENAME_METADATA = r'(?P<date>\d{4}-\d{2}-\d{2})-(?P<slug>.*)'
 EXTRA_PATH_METADATA = {
     'extra/robots.txt': {'path': 'robots.txt'},
+    'extra/favicon.ico': {'path': 'favicon.ico'},
     }
 
 # python-markdown extensions,
@@ -79,7 +80,8 @@ PLUGINS = [
     'neighbors',
     'read_more_link',
     'sitemap',
-    #'subcategory',
+    'subcategory',
+    'filetime_from_git',
     ]
 
 SITEMAP = {
@@ -98,7 +100,7 @@ SITEMAP = {
 
 ### theme settings
 THEME = 'octopress'
-FAVICON_URL = 'images/blog/favicon2.png'
+CSS_FILE = 'whitelake.css'
 SEARCH_BOX = True
 
 DISQUS_SITENAME = u'onebitbug'
@@ -124,5 +126,12 @@ MENUITEMS = (
     ('Biography', '/biography/'),
     ('GuestBook', '/guest/'),
     )
+
+SHOW_ARTICLE_NEIGHBORS = True
+SHOW_DISQUS_COMMENT_COUNT = True
+
+ARTICLE_ASIDES = ['recentpost', 'tags', 'categories', 'links']
+PAGE_ASIDES = []
+INDEX_ASIDES = ['github', 'recentpost', 'categories', 'social', 'links']
 
 # vim:ai:et:sts=4:sw=4:

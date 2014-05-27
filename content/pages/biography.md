@@ -2,6 +2,7 @@ Title: Biography
 Author: Zhang Cheng
 Slug: biography
 Date: 2012-04-01
+Sidebar: off
 
 {% img right /images/pages/snsface.png 180 %}
 ## Contact
