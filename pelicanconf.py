@@ -140,14 +140,15 @@ MENUITEMS = (
     ('Home', '/'),
     ('Archives', '/archives.html'),
     ('Biography', '/biography/'),
+    ('Blogroll', '/blogroll/'),
     ('GuestBook', '/guest/'),
     )
 
 SHOW_ARTICLE_NEIGHBORS = True
 SHOW_DISQUS_COMMENT_COUNT = True
 
-ARTICLE_ASIDES = ['recentpost', 'categories', 'tags', 'links', 'github']
+ARTICLE_ASIDES = ['recentpost', 'categories', 'tags', 'github']
 PAGE_ASIDES = []
-INDEX_ASIDES = ['categories', 'tags', 'links', 'github']
+INDEX_ASIDES = ['categories', 'tags', 'github']
 
 # vim:ai:et:sts=4:sw=4:
