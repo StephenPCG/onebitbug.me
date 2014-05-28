@@ -99,6 +99,7 @@ PLUGINS = [
     'read_more_link',
     'sitemap',
     'subcategory',
+    'summary',
     'filetime_from_git',
     ]
 
@@ -115,6 +116,9 @@ SITEMAP = {
         'pages': 'monthly'
     }
 }
+
+SUMMARY_BEGIN_MARKER = "BEGIN_SUMMARY"
+SUMMARY_END_MARKER = "END_SUMMARY"
 
 ### theme settings
 THEME = 'octopress'
