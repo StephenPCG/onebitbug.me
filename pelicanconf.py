@@ -74,7 +74,7 @@ EXTRA_PATH_METADATA = {
 
 # python-markdown extensions,
 # see: http://pythonhosted.org/Markdown/extensions/index.html
-MD_EXTENSIONS = ['codehilite(css_class=pre-code)', 'extra', 'fenced_code']
+MD_EXTENSIONS = ['codehilite(css_class=highlight)', 'extra', 'fenced_code']
 
 DELETE_OUTPUT_DIRECTORY = True
 
