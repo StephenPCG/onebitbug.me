@@ -72,6 +72,8 @@ EXTRA_PATH_METADATA = {
     'extra/favicon.ico': {'path': 'favicon.ico'},
     }
 
+CACHE_CONTENT = False
+
 # python-markdown extensions,
 # see: http://pythonhosted.org/Markdown/extensions/index.html
 MD_EXTENSIONS = ['codehilite(css_class=highlight)', 'extra', 'fenced_code']
