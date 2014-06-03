@@ -48,6 +48,8 @@ PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
 SUBCATEGORY_SAVE_AS = 'subcategory/{savepath}/index.html'
 SUBCATEGORY_URL = 'subcategory/{savepath}/'
+AUTHOR_URL = 'author/{slug}/'
+AUTHOR_SAVE_AS = 'author/{slug}/index.html'
 
 # custom url for special articles, for "Blog" and "Essays", keep the default
 CUSTOM_ARTICLE_URLS = {
