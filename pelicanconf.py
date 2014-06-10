@@ -53,9 +53,9 @@ AUTHOR_SAVE_AS = 'author/{slug}/index.html'
 
 # custom url for special articles, for "Blog" and "Essays", keep the default
 CUSTOM_ARTICLE_URLS = {
-        "Shares": {
-                "SAVE_AS": "shares/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html",
-                "URL": "shares/{date:%Y}/{date:%m}/{date:%d}/{slug}/",
+        "Reproduced": {
+                "SAVE_AS": "reproduced/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html",
+                "URL": "reproduced/{date:%Y}/{date:%m}/{date:%d}/{slug}/",
             },
         "Wiki": {
                 "SAVE_AS": "wiki/{slug}/index.html",
