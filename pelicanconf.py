@@ -61,6 +61,10 @@ CUSTOM_ARTICLE_URLS = {
                 "SAVE_AS": "wiki/{slug}/index.html",
                 "URL": "wiki/{slug}/",
             },
+        "Projects": {
+                "SAVE_AS": "projects/{slug}/index.html",
+                "URL": "projects/{slug}/",
+            }
     }
 
 USE_FOLDER_AS_CATEGORY = True
