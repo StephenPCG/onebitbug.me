@@ -5,8 +5,8 @@
 :sidebar: off
 
 
-SaltStack states vim snippets generator
------------------------------------------
+Vim Snippets Generator for SaltStack States Files
+----------------------------------------------------
 
 .. container:: twocol
 
@@ -15,14 +15,14 @@ SaltStack states vim snippets generator
       .. figure:: |filename|/images/projects/vim-snippets-salt/screenshot.gif
          :align: left
          :alt: image-not-showing
-         :target: |filename|/Projects/vim-snippets-salt.md
+         :target: |filename|/pages/projects/vim-snippets-salt.md
 
    .. container:: rightside
 
       This project contains a generator which extracts methods of states modules
       from salt source code, and generate corresponding snippets.
 
-      * Project Page: `/projects/vim-snippets-salt/ <|filename|/Projects/vim-snippets-salt.md>`_
+      * Project Page: `/projects/vim-snippets-salt/ <|filename|/pages/projects/vim-snippets-salt.md>`_
       * Code: https://github.com/StephenPCG/vim-snippets-salt
 
 

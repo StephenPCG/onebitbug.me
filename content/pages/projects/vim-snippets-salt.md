@@ -1,6 +1,6 @@
-Title: Vim Snippets for SaltStack States Files
+Title: Vim Snippets Generator for SaltStack States Files
 Tags: vim, saltstack
-Slug: vim-snippets-salt
+Slug: projects/vim-snippets-salt
 Lang: en
 
 <p><div class="special">
