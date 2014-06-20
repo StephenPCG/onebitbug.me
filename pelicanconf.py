@@ -151,6 +151,7 @@ LINKS = (
 MENUITEMS = (
     ('Home', '/'),
     ('Archives', '/archives.html'),
+    ('Projects', '/projects/'),
     ('Biography', '/biography/'),
     ('Blogroll', '/blogroll/'),
     ('GuestBook', '/guest/'),
